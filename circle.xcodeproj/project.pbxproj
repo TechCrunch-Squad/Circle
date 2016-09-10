@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04852F0D1D84CD4000216737 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04852F0B1D84CD4000216737 /* Chat.storyboard */; };
+		04852F0F1D84CD6500216737 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04852F0E1D84CD6500216737 /* Location.storyboard */; };
+		04852F121D84CD7A00216737 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04852F101D84CD7A00216737 /* Payment.storyboard */; };
+		04852F141D84CD9400216737 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04852F131D84CD9400216737 /* Settings.storyboard */; };
+		04852F171D84CDAA00216737 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04852F151D84CDAA00216737 /* Schedule.storyboard */; };
+		04852F211D84CE8D00216737 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F201D84CE8D00216737 /* ScheduleViewController.swift */; };
+		04852F241D84CEE800216737 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F231D84CEE800216737 /* SettingsViewController.swift */; };
+		04852F271D84CF2100216737 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F261D84CF2100216737 /* PaymentsViewController.swift */; };
+		04852F291D84CF3700216737 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F281D84CF3700216737 /* LocationViewController.swift */; };
+		04852F2D1D84CFAA00216737 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F2C1D84CFAA00216737 /* ChatViewController.swift */; };
 		16C3DF6B1D84C1900027F999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3DF6A1D84C1900027F999 /* AppDelegate.swift */; };
-		16C3DF6D1D84C1900027F999 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3DF6C1D84C1900027F999 /* ViewController.swift */; };
 		16C3DF701D84C1910027F999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16C3DF6E1D84C1910027F999 /* Main.storyboard */; };
 		16C3DF721D84C1910027F999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C3DF711D84C1910027F999 /* Assets.xcassets */; };
 		16C3DF751D84C1910027F999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16C3DF731D84C1910027F999 /* LaunchScreen.storyboard */; };
@@ -37,9 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04852F0C1D84CD4000216737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chat.storyboard; sourceTree = "<group>"; };
+		04852F0E1D84CD6500216737 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		04852F111D84CD7A00216737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Payment.storyboard; sourceTree = "<group>"; };
+		04852F131D84CD9400216737 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		04852F161D84CDAA00216737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Schedule.storyboard; sourceTree = "<group>"; };
+		04852F201D84CE8D00216737 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = Controller/ScheduleViewController.swift; sourceTree = "<group>"; };
+		04852F231D84CEE800216737 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
+		04852F261D84CF2100216737 /* PaymentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentsViewController.swift; path = Controller/PaymentsViewController.swift; sourceTree = "<group>"; };
+		04852F281D84CF3700216737 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = Controller/LocationViewController.swift; sourceTree = "<group>"; };
+		04852F2C1D84CFAA00216737 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = Controller/ChatViewController.swift; sourceTree = "<group>"; };
 		16C3DF671D84C1900027F999 /* circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C3DF6A1D84C1900027F999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16C3DF6C1D84C1900027F999 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16C3DF6F1D84C1910027F999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16C3DF711D84C1910027F999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16C3DF741D84C1910027F999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +107,181 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04852F181D84CDC000216737 /* Chat Flow */ = {
+			isa = PBXGroup;
+			children = (
+				04852F0B1D84CD4000216737 /* Chat.storyboard */,
+				04852F371D84D0CA00216737 /* Views */,
+				04852F361D84D0C200216737 /* Models */,
+				04852F2E1D84CFB100216737 /* Controllers */,
+			);
+			name = "Chat Flow";
+			sourceTree = "<group>";
+		};
+		04852F191D84CDD200216737 /* Location Flow */ = {
+			isa = PBXGroup;
+			children = (
+				04852F0E1D84CD6500216737 /* Location.storyboard */,
+				04852F351D84D0AA00216737 /* Views */,
+				04852F341D84D07E00216737 /* Models */,
+				04852F2B1D84CF6000216737 /* Controllers */,
+			);
+			name = "Location Flow";
+			sourceTree = "<group>";
+		};
+		04852F1A1D84CDE100216737 /* Payment Flow */ = {
+			isa = PBXGroup;
+			children = (
+				04852F101D84CD7A00216737 /* Payment.storyboard */,
+				04852F331D84D06A00216737 /* Views */,
+				04852F321D84D06200216737 /* Models */,
+				04852F251D84CEF600216737 /* Controllers */,
+			);
+			name = "Payment Flow";
+			sourceTree = "<group>";
+		};
+		04852F1B1D84CDF200216737 /* Settings Flow */ = {
+			isa = PBXGroup;
+			children = (
+				04852F131D84CD9400216737 /* Settings.storyboard */,
+				04852F311D84D04300216737 /* Views */,
+				04852F301D84D03B00216737 /* Models */,
+				04852F221D84CECD00216737 /* Controllers */,
+			);
+			name = "Settings Flow";
+			sourceTree = "<group>";
+		};
+		04852F1C1D84CE0000216737 /* Schedule Flow */ = {
+			isa = PBXGroup;
+			children = (
+				04852F151D84CDAA00216737 /* Schedule.storyboard */,
+				04852F1D1D84CE1500216737 /* Models */,
+				04852F1E1D84CE2000216737 /* Views */,
+				04852F1F1D84CE2800216737 /* Controllers */,
+			);
+			name = "Schedule Flow";
+			sourceTree = "<group>";
+		};
+		04852F1D1D84CE1500216737 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		04852F1E1D84CE2000216737 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		04852F1F1D84CE2800216737 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04852F201D84CE8D00216737 /* ScheduleViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		04852F221D84CECD00216737 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04852F231D84CEE800216737 /* SettingsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		04852F251D84CEF600216737 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04852F261D84CF2100216737 /* PaymentsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		04852F2B1D84CF6000216737 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04852F281D84CF3700216737 /* LocationViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		04852F2E1D84CFB100216737 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04852F2C1D84CFAA00216737 /* ChatViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		04852F2F1D84CFC000216737 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16C3DF711D84C1910027F999 /* Assets.xcassets */,
+				16C3DF731D84C1910027F999 /* LaunchScreen.storyboard */,
+				16C3DF761D84C1910027F999 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04852F301D84D03B00216737 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		04852F311D84D04300216737 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		04852F321D84D06200216737 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		04852F331D84D06A00216737 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		04852F341D84D07E00216737 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		04852F351D84D0AA00216737 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		04852F361D84D0C200216737 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		04852F371D84D0CA00216737 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		16C3DF5E1D84C1900027F999 = {
 			isa = PBXGroup;
 			children = (
@@ -115,11 +308,13 @@
 			isa = PBXGroup;
 			children = (
 				16C3DF6A1D84C1900027F999 /* AppDelegate.swift */,
-				16C3DF6C1D84C1900027F999 /* ViewController.swift */,
 				16C3DF6E1D84C1910027F999 /* Main.storyboard */,
-				16C3DF711D84C1910027F999 /* Assets.xcassets */,
-				16C3DF731D84C1910027F999 /* LaunchScreen.storyboard */,
-				16C3DF761D84C1910027F999 /* Info.plist */,
+				04852F1C1D84CE0000216737 /* Schedule Flow */,
+				04852F1B1D84CDF200216737 /* Settings Flow */,
+				04852F1A1D84CDE100216737 /* Payment Flow */,
+				04852F191D84CDD200216737 /* Location Flow */,
+				04852F181D84CDC000216737 /* Chat Flow */,
+				04852F2F1D84CFC000216737 /* Supporting Files */,
 			);
 			path = circle;
 			sourceTree = "<group>";
@@ -277,9 +472,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04852F0F1D84CD6500216737 /* Location.storyboard in Resources */,
 				16C3DF751D84C1910027F999 /* LaunchScreen.storyboard in Resources */,
 				16C3DF721D84C1910027F999 /* Assets.xcassets in Resources */,
+				04852F121D84CD7A00216737 /* Payment.storyboard in Resources */,
+				04852F0D1D84CD4000216737 /* Chat.storyboard in Resources */,
 				16C3DF701D84C1910027F999 /* Main.storyboard in Resources */,
+				04852F141D84CD9400216737 /* Settings.storyboard in Resources */,
+				04852F171D84CDAA00216737 /* Schedule.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +627,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16C3DF6D1D84C1900027F999 /* ViewController.swift in Sources */,
+				04852F271D84CF2100216737 /* PaymentsViewController.swift in Sources */,
+				04852F211D84CE8D00216737 /* ScheduleViewController.swift in Sources */,
+				04852F2D1D84CFAA00216737 /* ChatViewController.swift in Sources */,
+				04852F291D84CF3700216737 /* LocationViewController.swift in Sources */,
 				16C3DF6B1D84C1900027F999 /* AppDelegate.swift in Sources */,
+				04852F241D84CEE800216737 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +668,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		04852F0B1D84CD4000216737 /* Chat.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04852F0C1D84CD4000216737 /* Base */,
+			);
+			name = Chat.storyboard;
+			sourceTree = "<group>";
+		};
+		04852F101D84CD7A00216737 /* Payment.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04852F111D84CD7A00216737 /* Base */,
+			);
+			name = Payment.storyboard;
+			sourceTree = "<group>";
+		};
+		04852F151D84CDAA00216737 /* Schedule.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04852F161D84CDAA00216737 /* Base */,
+			);
+			name = Schedule.storyboard;
+			sourceTree = "<group>";
+		};
 		16C3DF6E1D84C1910027F999 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
