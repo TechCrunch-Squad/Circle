@@ -15,6 +15,7 @@ class ScheduleTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //fds
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
