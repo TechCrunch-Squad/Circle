@@ -12,7 +12,6 @@
 		04852F121D84CD7A00216737 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04852F101D84CD7A00216737 /* Payment.storyboard */; };
 		04852F141D84CD9400216737 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04852F131D84CD9400216737 /* Settings.storyboard */; };
 		04852F171D84CDAA00216737 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04852F151D84CDAA00216737 /* Schedule.storyboard */; };
-		04852F211D84CE8D00216737 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F201D84CE8D00216737 /* ScheduleViewController.swift */; };
 		04852F241D84CEE800216737 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F231D84CEE800216737 /* SettingsViewController.swift */; };
 		04852F271D84CF2100216737 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F261D84CF2100216737 /* PaymentsViewController.swift */; };
 		04852F291D84CF3700216737 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F281D84CF3700216737 /* LocationViewController.swift */; };
@@ -27,6 +26,8 @@
 		16C3DF8B1D84C1910027F999 /* circleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3DF8A1D84C1910027F999 /* circleUITests.swift */; };
 		37E8D3DEA23DB305CD915B74 /* Pods_circleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0B18844724B428C5984A1E /* Pods_circleTests.framework */; };
 		BE853CDB1F129FF1AC1CAE93 /* Pods_circleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395246B00BF7D72E40AD906A /* Pods_circleUITests.framework */; };
+		C00E33A81D851F8A0006F824 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E33A71D851F8A0006F824 /* ScheduleTableViewController.swift */; };
+		C00E33AA1D8525E90006F824 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E33A91D8525E90006F824 /* ScheduleTableViewCell.swift */; };
 		C07000FC1D850A15001549E2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07000FB1D850A15001549E2 /* TableViewController.swift */; };
 		F77740B92DECFC11E52B8AE0 /* Pods_circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11B10FDCA41E872EAA37FE5 /* Pods_circle.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +55,6 @@
 		04852F111D84CD7A00216737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Payment.storyboard; sourceTree = "<group>"; };
 		04852F131D84CD9400216737 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		04852F161D84CDAA00216737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Schedule.storyboard; sourceTree = "<group>"; };
-		04852F201D84CE8D00216737 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = Controller/ScheduleViewController.swift; sourceTree = "<group>"; };
 		04852F231D84CEE800216737 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
 		04852F261D84CF2100216737 /* PaymentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentsViewController.swift; path = Controller/PaymentsViewController.swift; sourceTree = "<group>"; };
 		04852F281D84CF3700216737 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = Controller/LocationViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +79,8 @@
 		395246B00BF7D72E40AD906A /* Pods_circleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0B18844724B428C5984A1E /* Pods_circleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		721130FC852B07ECB3B4E50D /* Pods-circleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-circleUITests/Pods-circleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C00E33A71D851F8A0006F824 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		C00E33A91D8525E90006F824 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		C07000FB1D850A15001549E2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D11B10FDCA41E872EAA37FE5 /* Pods_circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BAAB6A68D2CBC5A5395D41 /* Pods-circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circle.release.xcconfig"; path = "Pods/Target Support Files/Pods-circle/Pods-circle.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		04852F1D1D84CE1500216737 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C00E33A91D8525E90006F824 /* ScheduleTableViewCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -185,7 +188,7 @@
 		04852F1F1D84CE2800216737 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04852F201D84CE8D00216737 /* ScheduleViewController.swift */,
+				C00E33A71D851F8A0006F824 /* ScheduleTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -637,14 +640,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00E33A81D851F8A0006F824 /* ScheduleTableViewController.swift in Sources */,
 				C07000FC1D850A15001549E2 /* TableViewController.swift in Sources */,
 				04852F271D84CF2100216737 /* PaymentsViewController.swift in Sources */,
-				04852F211D84CE8D00216737 /* ScheduleViewController.swift in Sources */,
 				04852F2D1D84CFAA00216737 /* ChatMainVC.swift in Sources */,
 				169754571D84E28600B41FCE /* ChatViewController.swift in Sources */,
 				04852F291D84CF3700216737 /* LocationViewController.swift in Sources */,
 				16C3DF6B1D84C1900027F999 /* AppDelegate.swift in Sources */,
 				04852F241D84CEE800216737 /* SettingsViewController.swift in Sources */,
+				C00E33AA1D8525E90006F824 /* ScheduleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
