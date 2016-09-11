@@ -16,7 +16,9 @@
 		04852F241D84CEE800216737 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F231D84CEE800216737 /* SettingsViewController.swift */; };
 		04852F271D84CF2100216737 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F261D84CF2100216737 /* PaymentsViewController.swift */; };
 		04852F291D84CF3700216737 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F281D84CF3700216737 /* LocationViewController.swift */; };
-		04852F2D1D84CFAA00216737 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F2C1D84CFAA00216737 /* ChatViewController.swift */; };
+		04852F2D1D84CFAA00216737 /* ChatMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852F2C1D84CFAA00216737 /* ChatMainVC.swift */; };
+		169754571D84E28600B41FCE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169754561D84E28600B41FCE /* ChatViewController.swift */; };
+		169754591D84E8F700B41FCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 169754581D84E8F700B41FCE /* GoogleService-Info.plist */; };
 		16C3DF6B1D84C1900027F999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3DF6A1D84C1900027F999 /* AppDelegate.swift */; };
 		16C3DF701D84C1910027F999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16C3DF6E1D84C1910027F999 /* Main.storyboard */; };
 		16C3DF721D84C1910027F999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C3DF711D84C1910027F999 /* Assets.xcassets */; };
@@ -55,7 +57,9 @@
 		04852F231D84CEE800216737 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
 		04852F261D84CF2100216737 /* PaymentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentsViewController.swift; path = Controller/PaymentsViewController.swift; sourceTree = "<group>"; };
 		04852F281D84CF3700216737 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = Controller/LocationViewController.swift; sourceTree = "<group>"; };
-		04852F2C1D84CFAA00216737 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = Controller/ChatViewController.swift; sourceTree = "<group>"; };
+		04852F2C1D84CFAA00216737 /* ChatMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatMainVC.swift; path = Controller/ChatMainVC.swift; sourceTree = "<group>"; };
+		169754561D84E28600B41FCE /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		169754581D84E8F700B41FCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16C3DF671D84C1900027F999 /* circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C3DF6A1D84C1900027F999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16C3DF6F1D84C1910027F999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,7 +215,8 @@
 		04852F2E1D84CFB100216737 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04852F2C1D84CFAA00216737 /* ChatViewController.swift */,
+				169754561D84E28600B41FCE /* ChatViewController.swift */,
+				04852F2C1D84CFAA00216737 /* ChatMainVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				16C3DF7E1D84C1910027F999 /* circleTests */,
 				16C3DF891D84C1910027F999 /* circleUITests */,
 				16C3DF681D84C1900027F999 /* Products */,
+				169754581D84E8F700B41FCE /* GoogleService-Info.plist */,
 				72D1586386EBC31F48C917C1 /* Pods */,
 				C086BC65F8C2A5ABA6A6A019 /* Frameworks */,
 			);
@@ -474,6 +480,7 @@
 			files = (
 				04852F0F1D84CD6500216737 /* Location.storyboard in Resources */,
 				16C3DF751D84C1910027F999 /* LaunchScreen.storyboard in Resources */,
+				169754591D84E8F700B41FCE /* GoogleService-Info.plist in Resources */,
 				16C3DF721D84C1910027F999 /* Assets.xcassets in Resources */,
 				04852F121D84CD7A00216737 /* Payment.storyboard in Resources */,
 				04852F0D1D84CD4000216737 /* Chat.storyboard in Resources */,
@@ -629,7 +636,8 @@
 			files = (
 				04852F271D84CF2100216737 /* PaymentsViewController.swift in Sources */,
 				04852F211D84CE8D00216737 /* ScheduleViewController.swift in Sources */,
-				04852F2D1D84CFAA00216737 /* ChatViewController.swift in Sources */,
+				04852F2D1D84CFAA00216737 /* ChatMainVC.swift in Sources */,
+				169754571D84E28600B41FCE /* ChatViewController.swift in Sources */,
 				04852F291D84CF3700216737 /* LocationViewController.swift in Sources */,
 				16C3DF6B1D84C1900027F999 /* AppDelegate.swift in Sources */,
 				04852F241D84CEE800216737 /* SettingsViewController.swift in Sources */,

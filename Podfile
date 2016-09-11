@@ -4,6 +4,12 @@
 target 'circle' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+pod ‘JSQMessagesViewController’
+pod ‘Firebase’
+pod ‘FirebaseDatabase’
+pod ’SwiftyJSON’
+pod ‘Alamofire’
+pod ‘Firebase/Auth’
 
   # Pods for circle
 
