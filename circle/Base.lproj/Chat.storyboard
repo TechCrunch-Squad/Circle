@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Circle-->
@@ -89,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iaX-G7-C4S">
-                                <rect key="frame" x="20" y="249" width="560" height="302"/>
+                                <rect key="frame" x="0.0" y="249" width="600" height="302"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-ii-f1H">
@@ -103,11 +102,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vfZ-ii-f1H" firstAttribute="top" secondItem="kiD-U9-OAP" secondAttribute="bottom" constant="30" id="0CU-hH-em0"/>
+                            <constraint firstAttribute="trailing" secondItem="iaX-G7-C4S" secondAttribute="trailing" id="34k-3A-SoU"/>
                             <constraint firstItem="iaX-G7-C4S" firstAttribute="top" secondItem="vfZ-ii-f1H" secondAttribute="bottom" constant="30" id="CSS-Mq-DBj"/>
-                            <constraint firstItem="iaX-G7-C4S" firstAttribute="leading" secondItem="WJB-h6-YYS" secondAttribute="leadingMargin" id="QsH-ty-8xE"/>
+                            <constraint firstItem="cvW-PS-beR" firstAttribute="top" secondItem="iaX-G7-C4S" secondAttribute="bottom" id="Gxw-R6-AX1"/>
                             <constraint firstItem="vfZ-ii-f1H" firstAttribute="centerX" secondItem="WJB-h6-YYS" secondAttribute="centerX" id="ZDS-2t-6iH"/>
-                            <constraint firstItem="cvW-PS-beR" firstAttribute="top" secondItem="iaX-G7-C4S" secondAttribute="bottom" id="Zzo-zG-qS2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iaX-G7-C4S" secondAttribute="trailing" id="opo-WF-1TS"/>
+                            <constraint firstItem="iaX-G7-C4S" firstAttribute="leading" secondItem="WJB-h6-YYS" secondAttribute="leading" id="kVi-KM-XeP"/>
                         </constraints>
                     </view>
                 </viewController>
