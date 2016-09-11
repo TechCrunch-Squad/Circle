@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-tn-e8A">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-tn-e8A">
                                 <rect key="frame" x="0.0" y="419" width="375" height="199"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -48,8 +48,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="IPf-in-vgR" secondAttribute="trailing" constant="-20" id="8ay-BA-nwV"/>
                             <constraint firstItem="IPf-in-vgR" firstAttribute="leading" secondItem="k6g-Tz-mM0" secondAttribute="leadingMargin" constant="-20" id="Db0-Wd-gXW"/>
                             <constraint firstItem="vHY-9Q-Omn" firstAttribute="leading" secondItem="k6g-Tz-mM0" secondAttribute="leadingMargin" constant="-20" id="F7B-Dq-cBo"/>
+                            <constraint firstAttribute="trailing" secondItem="4fw-tn-e8A" secondAttribute="trailing" id="Itu-jN-Ilu"/>
                             <constraint firstItem="fth-LK-c0C" firstAttribute="top" secondItem="vHY-9Q-Omn" secondAttribute="bottom" id="MR1-JS-j8U"/>
                             <constraint firstItem="4fw-tn-e8A" firstAttribute="top" secondItem="vHY-9Q-Omn" secondAttribute="bottom" constant="303" id="O4H-1W-me6"/>
+                            <constraint firstItem="4fw-tn-e8A" firstAttribute="leading" secondItem="k6g-Tz-mM0" secondAttribute="leading" id="Oza-LR-ipy"/>
+                            <constraint firstItem="1eX-jw-7ac" firstAttribute="top" secondItem="4fw-tn-e8A" secondAttribute="bottom" id="Pqk-zP-mL4"/>
                             <constraint firstItem="1eX-jw-7ac" firstAttribute="top" secondItem="4fw-tn-e8A" secondAttribute="bottom" id="Tmk-2K-s5M"/>
                             <constraint firstItem="4fw-tn-e8A" firstAttribute="leading" secondItem="k6g-Tz-mM0" secondAttribute="leadingMargin" constant="-20" id="cfg-2q-rp0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fth-LK-c0C" secondAttribute="trailing" constant="-20" id="cgB-r4-oTT"/>
@@ -57,6 +60,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4fw-tn-e8A" secondAttribute="trailing" constant="-20" id="sm7-ux-a6y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vHY-9Q-Omn" secondAttribute="trailing" constant="-20" id="vKj-YT-p7e"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cfg-2q-rp0"/>
+                                <exclude reference="sm7-ux-a6y"/>
+                                <exclude reference="Tmk-2K-s5M"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ayq-az-ORs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
