@@ -29,6 +29,7 @@
 		C00E33A81D851F8A0006F824 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E33A71D851F8A0006F824 /* ScheduleTableViewController.swift */; };
 		C00E33AA1D8525E90006F824 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E33A91D8525E90006F824 /* ScheduleTableViewCell.swift */; };
 		C07000FC1D850A15001549E2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07000FB1D850A15001549E2 /* TableViewController.swift */; };
+		C074C5F81D8540D800902998 /* SchheduleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C074C5F71D8540D800902998 /* SchheduleInfoViewController.swift */; };
 		F77740B92DECFC11E52B8AE0 /* Pods_circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11B10FDCA41E872EAA37FE5 /* Pods_circle.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		C00E33A71D851F8A0006F824 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		C00E33A91D8525E90006F824 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		C07000FB1D850A15001549E2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C074C5F71D8540D800902998 /* SchheduleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchheduleInfoViewController.swift; sourceTree = "<group>"; };
 		D11B10FDCA41E872EAA37FE5 /* Pods_circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BAAB6A68D2CBC5A5395D41 /* Pods-circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circle.release.xcconfig"; path = "Pods/Target Support Files/Pods-circle/Pods-circle.release.xcconfig"; sourceTree = "<group>"; };
 		D1CAC02C1B34001E50598D0B /* Pods-circleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-circleTests/Pods-circleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		04852F1E1D84CE2000216737 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C074C5F71D8540D800902998 /* SchheduleInfoViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				04852F291D84CF3700216737 /* LocationViewController.swift in Sources */,
 				16C3DF6B1D84C1900027F999 /* AppDelegate.swift in Sources */,
 				04852F241D84CEE800216737 /* SettingsViewController.swift in Sources */,
+				C074C5F81D8540D800902998 /* SchheduleInfoViewController.swift in Sources */,
 				C00E33AA1D8525E90006F824 /* ScheduleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
