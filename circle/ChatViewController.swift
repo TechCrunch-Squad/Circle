@@ -10,398 +10,86 @@ import FirebaseAuth
 
 
 class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    var outgoingBubble:JSQMessagesBubbleImage!
-    var incomingbubbleImage:JSQMessagesBubbleImage!
+    let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
+    let outgoingBubble = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.lightGrayColor())
     var messages = [JSQMessage]()
-    var avatar = [String:JSQMessagesAvatarImage]()
-    var chatRooomName: String!
-    var ref = FIRDatabase.database().reference()
-    var usersId = FIRAuth.auth()?.currentUser?.uid
-    
-    var user = FIRAuth.auth()?.currentUser
-    
-    
-    
-    var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //right nav bar
-        let translateMessageToEnglishButton = UIBarButtonItem(title: "Envia inglés 🇺🇸", style: .Plain, target: self, action: #selector(ChatViewController.translateToEnglish))
-        // let preferred over var here
-        navigationItem.rightBarButtonItem = translateMessageToEnglishButton
-        
-        //        func buttonAction(sender:UIButton!){
-        
-        //        }
-        
-        //        self.senderId = "01"
-        //        self.senderDisplayName = "John"
-        
-        let bubbleFactory = JSQMessagesBubbleImageFactory()
-        self.outgoingBubble = bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleRedColor())
-        self.incomingbubbleImage = bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleBlueColor())
-        
-        //        button.frame = CGRectMake(100, 100, 100, 50)
-        //        button.backgroundColor = UIColor.greenColor()
-        //        button.setTitle("Button", forState: UIControlState.Normal)
-        //        self.view.addSubview(button)
-        
-        
-//        ref.child("PublicChatRoom").observeEventType(.ChildAdded) { (snapshot: FIRDataSnapshot) in
-//            let info = snapshot.value! as! NSDictionary
-//            
-//            let msg = JSQMessage(senderId: info["senderId"] as! String, senderDisplayName: info["senderName"] as! String, date: NSDate.init(timeIntervalSince1970: info["timestamp"] as! Double), text: info["text"] as! String)
-//            self.messages.append(msg)
-//            self.setupAvatarColor(msg.senderId, name: msg.senderDisplayName, incoming: true)
-//            
-//            
-        
-            self.finishReceivingMessage()
-            
-        }
-        
+        // Do any additional setup after loading the view, typically from a nib.
+        self.setup()
+        self.addDemoMessages()
     }
     
-    func rightButtonAction(sender:UIButton) {
-        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    func randomFunctionCall(sender:UIBarButtonItem) {
-        
+    func reloadMessagesView() {
+        self.collectionView?.reloadData()
+    }
+}
+
+//MARK - Setup
+extension ChatViewController {
+    func addDemoMessages() {
+        for i in 1...10 {
+            let sender = (i%2 == 0) ? "Server" : self.senderId
+            let messageContent = "Message nr. \(i)"
+            let message = JSQMessage(senderId: sender, displayName: sender, text: messageContent)
+            self.messages += [message]
+        }
+        self.reloadMessagesView()
     }
     
-    
-    func translateToEnglish() {
-        
-        //        var senderId = ""
-//        let text = inputToolbar.contentView.textView.text
-//        let date = NSDate()
-        
-//        let msg = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
-        
-//        if self.avatar[senderId] == nil {
-//            self.setupAvatarColor(msg.senderId, name: msg.senderDisplayName, incoming: true)
-        
-        }
-        
-        
-//        let message = text
-//        // what does this line do?
-//        var messageForURL = ""
-//        //does a for loop duhhhhhhh
-//        // what does this line do?
-//        for character in message.characters {
-//            // what does this line do?
-//            if character == " " {
-//                // literally gives %20 cause that stands for a space in a url link
-//                // what does this line do?
-//                messageForURL += "%20"
-//                // what does this line do?
-//            }
-//                // what does this line do?
-//            else {
-//                //append means to add to the chars
-//                // what does this line do?
-//                messageForURL.append(character)
-//                // what does this line do?
-//            }
-//            //closes the for loop<>
-//            // |
-//            // what does this line do?
-//        }
-//        
-//        
-//        // what does this line do?
-//        //        var address = "á, ó, ñ,"
-//        //        var escapeAccents = address.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
-//        //
-//        
-//        
-//        let apiToContact = "https://www.googleapis.com/language/translate/v2?key=AIzaSyDDTV4qnVy3CK0CwtXLG0h1HYrtKmIWM8c&q=\(messageForURL)&source=es&target=en"
-//        
-//        // This code will call the google translate api
-//        Alamofire.request(.GET, apiToContact).validate().responseJSON() { response in
-//            switch response.result {
-//            case .Success:
-//                if let value = response.result.value {
-//                    let json = JSON(value)
-//                    print(json)
-//                    
-//                    let data = json["data"]["translations"][0]["translatedText"].stringValue
-//                    
-//                    print("Data is : " + data)
-//                    
-//                    
-//                    
-//                    self.ref.child("PublicChatRoom").childByAutoId().setValue(
-//                        ["text": data,
-//                            "senderId": self.senderId,
-//                            "senderName": self.senderDisplayName,
-//                            "timestamp": date.timeIntervalSince1970,
-//                            "MediaType" : "TEXT" ])
-//                    JSQSystemSoundPlayer.jsq_playMessageSentSound()
-//                    
-//                    
-//                    
-//                    self.finishSendingMessageAnimated(true)
-//                    
-//                    
-//                    
-//                    // Do what you need to with JSON here!
-//                    // The rest is all boiler plate code you'll use for API requests
-//                    
-//                }
-//            case .Failure(let error):
-//                print(error)
-//            }
-//        }
-//    }
-
-    //english
-//    func translateMessageToEnglish (button: UIBarButtonItem!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate! ) {
-//        
-//        let msg = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
-//        print(msg)
-//        
-//        if self.avatar[senderId] == nil {
-//            self.setupAvatarColor(msg.senderId, name: msg.senderDisplayName, incoming: true)
-//            
-//        }
-//        
-//        
-//        let message = text
-//        // what does this line do?
-//        var messageForURL = ""
-//        //does a for loop duhhhhhhh
-//        // what does this line do?
-//        for character in message.characters {
-//            // what does this line do?
-//            if character == " " {
-//                // literally gives %20 cause that stands for a space in a url link
-//                // what does this line do?
-//                messageForURL += "%20"
-//                // what does this line do?
-//            }
-//                // what does this line do?
-//            else {
-//                //append means to add to the chars
-//                // what does this line do?
-//                messageForURL.append(character)
-//                // what does this line do?
-//            }
-//            //closes the for loop<>
-//            // |
-//            // what does this line do?
-//        }
-//        
-//        
-//        // what does this line do?
-//        let apiToContact = "https://www.googleapis.com/language/translate/v2?key=AIzaSyDDTV4qnVy3CK0CwtXLG0h1HYrtKmIWM8c&q=\(messageForURL)&source=es&target=en"
-//        
-//        // This code will call the google translate api
-//        Alamofire.request(.GET, apiToContact).validate().responseJSON() { response in
-//            switch response.result {
-//            case .Success:
-//                if let value = response.result.value {
-//                    let json = JSON(value)
-//                    print(json)
-//                    
-//                    let data = json["data"]["translations"][0]["translatedText"].stringValue
-//                    
-//                    print("Data is : " + data)
-//                    
-//                    
-//                    
-//                    self.ref.child("PublicChatRoom").childByAutoId().setValue(
-//                        ["text": data,
-//                            "senderId": senderId,
-//                            "senderName": senderDisplayName,
-//                            "timestamp": date.timeIntervalSince1970,
-//                            "MediaType" : "TEXT" ])
-//                    JSQSystemSoundPlayer.jsq_playMessageSentSound()
-//                    
-//                    
-//                    
-//                    self.finishSendingMessageAnimated(true)
-//                    
-//                    
-//                    
-//                    // Do what you need to with JSON here!
-//                    // The rest is all boiler plate code you'll use for API requests
-//                    
-//                }
-//            case .Failure(let error):
-//                print(error)
-//            }
-//        }
-//        
-//        print("translate")
-
-        
-        
-
-
-
-    
-     func didPressAccessoryButton(sender: UIButton!) {
-        let sheet = UIAlertController(title: "Media Messages", message: "Please Select A media", preferredStyle: UIAlertControllerStyle.ActionSheet)
-        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (alert: UIAlertAction!) -> Void in
-            sheet.dismissViewControllerAnimated(true, completion: nil)
-        }
-        let sendPhoto = UIAlertAction(title: "Send Photo", style: UIAlertActionStyle.Default){ ( alert: UIAlertAction!) -> Void in
-            photolibrary()
-        }
-//        sheet.addAction(sendPhoto)
-//        sheet.addAction(cancel)
-//        presentViewController(sheet, animated: true, completion: nil)
-//        
+    func setup() {
+        self.senderId = UIDevice.currentDevice().identifierForVendor?.UUIDString
+        self.senderDisplayName = UIDevice.currentDevice().identifierForVendor?.UUIDString
     }
-    
-     func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
-        
-        let msg = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
-        
-//        if self.avatar[senderId] == nil {
-//            self.setupAvatarColor(msg.senderId, name: msg.senderDisplayName, incoming: true)
-//            
-        }
-        
-        
-//        let message = text
-//        // what does this line do?
-//        var messageForURL = ""
-//        //does a for loop duhhhhhhh
-//        // what does this line do?
-//        for character in message.characters {
-//            // what does this line do?
-//            if character == " " {
-//                // literally gives %20 cause that stands for a space in a url link
-//                // what does this line do?
-//                messageForURL += "%20"
-//                // what does this line do?
-//            }
-//                // what does this line do?
-//            else {
-//                //append means to add to the chars
-//                // what does this line do?
-//                messageForURL.append(character)
-//                // what does this line do?
-//            }
-//            //closes the for loop<>
-//            // |
-//            // what does this line do?
-//        }
-//        
-//        
-//        // what does this line do?
-//        let apiToContact = "https://www.googleapis.com/language/translate/v2?key=AIzaSyDDTV4qnVy3CK0CwtXLG0h1HYrtKmIWM8c&q=\(messageForURL)&source=en&target=es"
-//        
-//        // This code will call the google translate api
-//        Alamofire.request(.GET, apiToContact).validate().responseJSON() { response in
-//            switch response.result {
-//            case .Success:
-//                if let value = response.result.value {
-//                    let json = JSON(value)
-//                    print(json)
-//                    
-//                    let data = json["data"]["translations"][0]["translatedText"].stringValue
-//                    
-//                    print("Data is : " + data)
-//                    
-//                    
-//                    
-//                    self.ref.child("PublicChatRoom").childByAutoId().setValue(
-//                        ["text": data,
-//                            "senderId": senderId,
-//                            "senderName": senderDisplayName,
-//                            "timestamp": date.timeIntervalSince1970,
-//                            "MediaType" : "TEXT" ])
-//                    JSQSystemSoundPlayer.jsq_playMessageSentSound()
-//                    
+}
 
-                    
-//                    self.finishSendingMessageAnimated(true)
-
-                    
-                    
-                    // Do what you need to with JSON here!
-                    // The rest is all boiler plate code you'll use for API requests
-                    
-                }
-            case .Failure(let error):
-                print(error)
-            }
-        }
-        
-        
-        
-        
-        
-    }
+//MARK - Data Source
+extension ChatViewController {
     
-    //MARK: UIcollectionView new methods
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return messages.count
+        return self.messages.count
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
-        return messages[indexPath.row]
-        
+        let data = self.messages[indexPath.row]
+        return data
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, didDeleteMessageAtIndexPath indexPath: NSIndexPath!) {
+        self.messages.removeAtIndex(indexPath.row)
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
-        let message = messages[indexPath.row]
-        
-        if message.senderId == self.senderId {
+        let data = messages[indexPath.row]
+        switch(data.senderId) {
+        case self.senderId:
             return self.outgoingBubble
+        default:
+            return self.incomingBubble
         }
-        return self.incomingbubbleImage
-        
-    }
-    
-    //picker
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        let img = image
-        let jsqImage = JSQPhotoMediaItem(image: img)
-        let msg = JSQMessage(senderId: self.senderId, senderDisplayName: self.senderDisplayName, date: NSDate(), media: jsqImage)
-        self.messages.append(msg)
-        if self.avatar[msg.senderId] == nil {
-            self.setupAvatarColor(msg.senderId, name: msg.senderDisplayName, incoming: false)
-        }
-        self.finishSendingMessage()
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
-        let message = messages[indexPath.row]
-        return self.avatar[message.senderId] as! JSQMessageAvatarImageDataSource
+        return nil
+    }
+}
+
+//MARK - Toolbar
+extension ChatViewController {
+    override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+        let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
+        self.messages += [message]
+        self.finishSendingMessage()
     }
     
-    func setupAvatarColor(id: String, name: String, incoming: Bool){
-        let diameter = incoming ? UInt((collectionView?.collectionViewLayout.incomingAvatarViewSize.width)!) : UInt((collectionView?.collectionViewLayout.outgoingAvatarViewSize.width)!)
-        let color =  UIColor.lightGrayColor()
-        let initials = name.substringToIndex(name.startIndex.advancedBy(min(3,name.characters.count)))
-        let userImg  = JSQMessagesAvatarImageFactory.avatarImageWithUserInitials(initials, backgroundColor: color, textColor: UIColor.blackColor(), font: UIFont.systemFontOfSize(12), diameter: diameter)
-        self.avatar[id] = userImg
-    }
-    
-    func photolibrary() {
-        self.imagePicker.allowsEditing = false
-        self.imagePicker.delegate = self
-        self.imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.imagePicker.mediaTypes = [kUTTypeImage as String]
-        self.presentViewController(self.imagePicker, animated: true, completion: nil )
-    }
-    func setup() {
-       var  senderId = "1234"
-       var senderDisplayName = "TEST"
+    override func didPressAccessoryButton(sender: UIButton!) {
         
     }
-    
     
 }
