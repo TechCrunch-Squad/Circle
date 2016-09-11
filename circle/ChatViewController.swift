@@ -10,12 +10,14 @@ import FirebaseAuth
 
 
 class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var personInfo: UINavigationItem!
     let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
     let outgoingBubble = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.grayColor())
     var messages = [JSQMessage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        personInfo.title = "what?😢"
         self.tabBarController?.tabBar.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
         self.setup()
