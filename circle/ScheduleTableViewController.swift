@@ -22,6 +22,13 @@ class ScheduleTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.dataSource = self
+        tableView.delegate = self
+        //Fix Later
+//        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
 
     override func didReceiveMemoryWarning() {
