@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="-445.5" y="1544.5"/>
         </scene>
-        <!--Schedule Table View Controller-->
+        <!--Schedule View Controller-->
         <scene sceneID="fHJ-pm-CqV">
             <objects>
-                <viewController id="AL8-LP-ziz" customClass="ScheduleTableViewController" customModule="circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AL8-LP-ziz" customClass="ScheduleViewController" customModule="circle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sbM-aB-74f"/>
                         <viewControllerLayoutGuide type="bottom" id="Mtd-2l-0AT"/>

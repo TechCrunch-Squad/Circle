@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="el5-7Q-bV4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="el5-7Q-bV4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -50,7 +50,7 @@
         <scene sceneID="RLn-2B-hyG">
             <objects>
                 <viewControllerPlaceholder storyboardName="Payment" id="IaS-5E-5cj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uAI-fF-B8y"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="notes" selectedImage="notes" id="uAI-fF-B8y"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m92-5W-a9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +60,7 @@
         <scene sceneID="aa1-s5-Y0U">
             <objects>
                 <viewControllerPlaceholder storyboardName="Settings" id="bnJ-io-17z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="G5f-Qh-ddR"/>
+                    <tabBarItem key="tabBarItem" selectedImage="user" systemItem="contacts" id="G5f-Qh-ddR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzR-8P-pPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,11 +70,16 @@
         <scene sceneID="eai-Ha-7c8">
             <objects>
                 <viewControllerPlaceholder storyboardName="Schedule" id="1X3-bO-2Of" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="Rkh-gH-Ye8"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="calendar" id="Rkh-gH-Ye8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpf-oN-PVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-784" y="1254"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" width="512" height="512"/>
+        <image name="notes" width="512" height="512"/>
+        <image name="user" width="512" height="512"/>
+    </resources>
 </document>

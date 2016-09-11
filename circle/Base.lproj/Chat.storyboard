@@ -87,8 +87,8 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="180"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Jorge" translatesAutoresizingMaskIntoConstraints="NO" id="YRj-uT-iiG">
-                                    <rect key="frame" x="180" y="26" width="240" height="128"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jorge" translatesAutoresizingMaskIntoConstraints="NO" id="YRj-uT-iiG">
+                                    <rect key="frame" x="237.5" y="26" width="125" height="128"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="128" id="hV8-M9-L8P"/>
                                         <constraint firstAttribute="width" constant="125" id="xEg-HG-w7G"/>
@@ -139,10 +139,9 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Putra" id="vf4-8P-S5r">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="43.5" image="Putra" id="vf4-8P-S5r">
                                                     <rect key="frame" x="15" y="0.0" width="44" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 </imageView>
                                             </subviews>
                                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
