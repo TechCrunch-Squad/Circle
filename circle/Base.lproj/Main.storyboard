@@ -70,7 +70,7 @@
         <scene sceneID="eai-Ha-7c8">
             <objects>
                 <viewControllerPlaceholder storyboardName="Schedule" id="1X3-bO-2Of" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Rkh-gH-Ye8"/>
+                    <tabBarItem key="tabBarItem" title="" id="Rkh-gH-Ye8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpf-oN-PVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
