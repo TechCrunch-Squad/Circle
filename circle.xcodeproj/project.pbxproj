@@ -117,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				04852F0B1D84CD4000216737 /* Chat.storyboard */,
-				C07000FB1D850A15001549E2 /* GroupInfoViewController.swift */,
 				04852F371D84D0CA00216737 /* Views */,
 				04852F361D84D0C200216737 /* Models */,
 				04852F2E1D84CFB100216737 /* Controllers */,
@@ -220,6 +219,7 @@
 			children = (
 				169754561D84E28600B41FCE /* ChatViewController.swift */,
 				04852F2C1D84CFAA00216737 /* ChatMainVC.swift */,
+				C07000FB1D850A15001549E2 /* GroupInfoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
