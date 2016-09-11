@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8n6-Sy-0pa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8n6-Sy-0pa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item-->
@@ -14,16 +15,59 @@
                         <viewControllerLayoutGuide type="bottom" id="1eX-jw-7ac"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k6g-Tz-mM0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPf-in-vgR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="s5I-Qh-JH1"/>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fth-LK-c0C">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHY-9Q-Omn">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-tn-e8A">
+                                <rect key="frame" x="0.0" y="419" width="375" height="199"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8n6-Sy-0pa" id="3nz-yL-usX"/>
+                                    <outlet property="delegate" destination="8n6-Sy-0pa" id="FEi-Ze-uhF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vHY-9Q-Omn" firstAttribute="top" secondItem="IPf-in-vgR" secondAttribute="bottom" id="5a0-gk-awC"/>
+                            <constraint firstItem="IPf-in-vgR" firstAttribute="top" secondItem="RiF-6k-1Yl" secondAttribute="bottom" constant="8" id="704-kw-wtY"/>
+                            <constraint firstItem="fth-LK-c0C" firstAttribute="leading" secondItem="k6g-Tz-mM0" secondAttribute="leadingMargin" constant="-20" id="8Q9-VN-TZm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IPf-in-vgR" secondAttribute="trailing" constant="-20" id="8ay-BA-nwV"/>
+                            <constraint firstItem="IPf-in-vgR" firstAttribute="leading" secondItem="k6g-Tz-mM0" secondAttribute="leadingMargin" constant="-20" id="Db0-Wd-gXW"/>
+                            <constraint firstItem="vHY-9Q-Omn" firstAttribute="leading" secondItem="k6g-Tz-mM0" secondAttribute="leadingMargin" constant="-20" id="F7B-Dq-cBo"/>
+                            <constraint firstItem="fth-LK-c0C" firstAttribute="top" secondItem="vHY-9Q-Omn" secondAttribute="bottom" id="MR1-JS-j8U"/>
+                            <constraint firstItem="4fw-tn-e8A" firstAttribute="top" secondItem="vHY-9Q-Omn" secondAttribute="bottom" constant="303" id="O4H-1W-me6"/>
+                            <constraint firstItem="1eX-jw-7ac" firstAttribute="top" secondItem="4fw-tn-e8A" secondAttribute="bottom" id="Tmk-2K-s5M"/>
+                            <constraint firstItem="4fw-tn-e8A" firstAttribute="leading" secondItem="k6g-Tz-mM0" secondAttribute="leadingMargin" constant="-20" id="cfg-2q-rp0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fth-LK-c0C" secondAttribute="trailing" constant="-20" id="cgB-r4-oTT"/>
+                            <constraint firstItem="1eX-jw-7ac" firstAttribute="top" secondItem="fth-LK-c0C" secondAttribute="bottom" id="pQw-6b-ozI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4fw-tn-e8A" secondAttribute="trailing" constant="-20" id="sm7-ux-a6y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vHY-9Q-Omn" secondAttribute="trailing" constant="-20" id="vKj-YT-p7e"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ayq-az-ORs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="4fw-tn-e8A" id="sbf-i1-ZDN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJr-vI-lz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-270"/>
+            <point key="canvasLocation" x="371.5" y="-270.5"/>
         </scene>
     </scenes>
 </document>
