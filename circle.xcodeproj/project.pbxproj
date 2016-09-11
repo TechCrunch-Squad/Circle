@@ -319,6 +319,7 @@
 		16C3DF691D84C1900027F999 /* circle */ = {
 			isa = PBXGroup;
 			children = (
+				04852F2F1D84CFC000216737 /* Supporting Files */,
 				16C3DF6A1D84C1900027F999 /* AppDelegate.swift */,
 				16C3DF6E1D84C1910027F999 /* Main.storyboard */,
 				04852F1C1D84CE0000216737 /* Schedule Flow */,
@@ -326,7 +327,6 @@
 				04852F1A1D84CDE100216737 /* Payment Flow */,
 				04852F191D84CDD200216737 /* Location Flow */,
 				04852F181D84CDC000216737 /* Chat Flow */,
-				04852F2F1D84CFC000216737 /* Supporting Files */,
 			);
 			path = circle;
 			sourceTree = "<group>";

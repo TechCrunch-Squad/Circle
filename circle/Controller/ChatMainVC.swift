@@ -14,11 +14,15 @@ class ChatMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.hidden = false
 
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
+    }
+   override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+    self.tabBarController?.tabBar.hidden = false
+
     }
 
     override func didReceiveMemoryWarning() {
