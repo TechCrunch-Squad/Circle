@@ -27,6 +27,7 @@
 		16C3DF8B1D84C1910027F999 /* circleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3DF8A1D84C1910027F999 /* circleUITests.swift */; };
 		37E8D3DEA23DB305CD915B74 /* Pods_circleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0B18844724B428C5984A1E /* Pods_circleTests.framework */; };
 		BE853CDB1F129FF1AC1CAE93 /* Pods_circleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395246B00BF7D72E40AD906A /* Pods_circleUITests.framework */; };
+		C07000FC1D850A15001549E2 /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07000FB1D850A15001549E2 /* GroupInfoViewController.swift */; };
 		F77740B92DECFC11E52B8AE0 /* Pods_circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11B10FDCA41E872EAA37FE5 /* Pods_circle.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		395246B00BF7D72E40AD906A /* Pods_circleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0B18844724B428C5984A1E /* Pods_circleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		721130FC852B07ECB3B4E50D /* Pods-circleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-circleUITests/Pods-circleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C07000FB1D850A15001549E2 /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupInfoViewController.swift; sourceTree = "<group>"; };
 		D11B10FDCA41E872EAA37FE5 /* Pods_circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BAAB6A68D2CBC5A5395D41 /* Pods-circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circle.release.xcconfig"; path = "Pods/Target Support Files/Pods-circle/Pods-circle.release.xcconfig"; sourceTree = "<group>"; };
 		D1CAC02C1B34001E50598D0B /* Pods-circleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-circleTests/Pods-circleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				04852F0B1D84CD4000216737 /* Chat.storyboard */,
+				C07000FB1D850A15001549E2 /* GroupInfoViewController.swift */,
 				04852F371D84D0CA00216737 /* Views */,
 				04852F361D84D0C200216737 /* Models */,
 				04852F2E1D84CFB100216737 /* Controllers */,
@@ -634,6 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07000FC1D850A15001549E2 /* GroupInfoViewController.swift in Sources */,
 				04852F271D84CF2100216737 /* PaymentsViewController.swift in Sources */,
 				04852F211D84CE8D00216737 /* ScheduleViewController.swift in Sources */,
 				04852F2D1D84CFAA00216737 /* ChatMainVC.swift in Sources */,
